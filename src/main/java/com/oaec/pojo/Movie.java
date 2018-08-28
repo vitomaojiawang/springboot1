@@ -2,6 +2,7 @@ package com.oaec.pojo;
 
 public class Movie {
 	private int movie_id;
+	private int age;
 
 	public int getMovie_id() {
 		return movie_id;
