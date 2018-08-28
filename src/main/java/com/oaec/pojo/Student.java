@@ -4,6 +4,14 @@ public class Student {
 	private String stu_name;
 	private String stu_pwd;
 	private String stu_score;
+	private int age;
+	public void setAge(int age){
+		this.age=age;
+	}
+	public int getAge(){
+		return this.age;
+	}
+
 	public String getStu_name() {
 		return stu_name;
 	}
