@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oaec.mapper.UserMapper">
+	<select id="findUserById" resultType="com.oaec.pojo.User" parameterType="int">
+		select * from users where user_id = #{id}
+	</select>
+	<select id="login" resultType="com.oaec.pojo.User">
+		select * from users where user_account = #{username} and user_pwd=#{userpwd}
+	</select>
+	<select id="queryAllUsers" resultType="com.oaec.pojo.User">
+		select * from users
+	</select>
+	<insert id="insertUser" parameterType="com.oaec.pojo.User">
+		insert into Users(user_account,user_pwd,user_email)
+		 values(#{user_account},#{user_pwd},#{user_email})
+	</insert>
+</mapper>
